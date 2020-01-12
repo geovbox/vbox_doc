@@ -13,61 +13,44 @@
 
   
   
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
   
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="5 颜色表" href="color.html" />
-    <link rel="prev" title="3 一个实例学会VBOX" href="push/index.html" />
- 
-<!-- favicons -->
-
-<link rel="shortcut icon" href="/_static/favicon.ico" type="image/x-icon" type="image/png" />
-
-<!-- Opera Speed Dial Icon -->
-<link rel="icon" href="/_static/apple-touch-icon-152x152.png" type="image/png" />
-
-<!-- Safari on iOS -->
-<link rel="apple-touch-icon" href="/_static/apple-touch-icon.png"  type="image/png" />
-<link rel="apple-touch-icon" sizes="57x57" href="/_static/apple-touch-icon-57x57.png" type="image/png" />
-<link rel="apple-touch-icon" sizes="72x72" href="/_static/apple-touch-icon-72x72.png" type="image/png" />
-<link rel="apple-touch-icon" sizes="76x76" href="/_static/apple-touch-icon-76x76.png" type="image/png" />
-<link rel="apple-touch-icon" sizes="114x114" href="/_static/apple-touch-icon-114x114.png" type="image/png" />
-<link rel="apple-touch-icon" sizes="120x120" href="/_static/apple-touch-icon-120x120.png" type="image/png" />
-<link rel="apple-touch-icon" sizes="144x144" href="/_static/apple-touch-icon-144x144.png" type="image/png" />
-<link rel="apple-touch-icon" sizes="152x152" href="/_static/apple-touch-icon-152x152.png" type="image/png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/_static/apple-touch-icon-180x180.png" type="image/png" />
-
-<!-- For tiles on Windows -->
-<meta name="msapplication-TileImage" content="/_static/apple-touch-icon-114x114.png"/>
-<meta name="msapplication-TileColor" content="#d83434"/>
-
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+    <link rel="next" title="5 构造模拟" href="struct/index.html" />
+    <link rel="prev" title="3 一个示例学会VBOX" href="push/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -100,6 +83,7 @@
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+    
             
             
               
@@ -108,18 +92,38 @@
               <p class="caption"><span class="caption-text">目 录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1 简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="use.html">2 在Windows下使用</a></li>
-<li class="toctree-l1"><a class="reference internal" href="push/index.html">3 一个实例学会VBOX</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4 提交计算</a></li>
-<li class="toctree-l1"><a class="reference internal" href="color.html">5 颜色表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use.html">2 Windows下运行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="push/index.html">3 一个示例学会VBOX</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4 提交计算</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">4.1 直接提交</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lsf">4.2 LSF调度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sge">4.3 SGE调度</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="struct/index.html">5 构造模拟</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cmd/index.html">6 命令参考</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hpc.html">7 南京大学高性能计算中心账户申请</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linux.html">8 Linux命令行基本操作</a></li>
-<li class="toctree-l1"><a class="reference internal" href="thanks.html">9 致谢</a></li>
+<li class="toctree-l1"><a class="reference internal" href="color.html">7 颜色表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">8 开通账户</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux.html">9 Linux命令行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thanks.html">10 致谢</a></li>
 </ul>
 
             
           
+
+    
+        <p class="caption">
+            <span class="caption-text">外部链接</span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://geovbox.com"><i class="fa fa-globe fa-fw"></i> VBOX官网</a></li>
+            
+                <li class="toctree-l1"><a href="https://geovbox.com/about/"><i class="fa fa-envelope fa-fw"></i> 联系我们</a></li>
+            
+        </ul>
+    
+
         </div>
       </div>
     </nav>
@@ -179,10 +183,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="color.html" class="btn btn-neutral float-right" title="5 颜色表" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="struct/index.html" class="btn btn-neutral float-right" title="5 构造模拟" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="push/index.html" class="btn btn-neutral" title="3 一个实例学会VBOX" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="push/index.html" class="btn btn-neutral float-left" title="3 一个示例学会VBOX" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -193,37 +197,97 @@
             
   <div class="section" id="id1">
 <h1>4 提交计算<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<ul>
-<li><dl class="first docutils">
-<dt>直接计算</dt>
-<dd><div class="first highlight-bash notranslate"><div class="highlight"><pre><span></span>vboxdaily cmd.txt
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">push.py</span></code> 为你要运行的脚本名</p>
+</div></blockquote>
+<div class="section" id="id2">
+<h2>4.1 直接提交<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#程序名 脚本名</span>
+vboxdaily push.py
 </pre></div>
 </div>
-<ul class="last simple">
-<li>优点：实时查看计算是否正确，使用`ctrl+c`结束计算</li>
-<li>缺点：关闭`xshell`，计算停止</li>
+<ul class="simple">
+<li><p>优点：实时查看计算是否正确，使用`ctrl+c`结束计算</p></li>
+<li><p>缺点：关闭 <code class="docutils literal notranslate"><span class="pre">xshell</span></code> ，计算停止</p></li>
 </ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>使用SGE调度VBOX</dt>
-<dd><div class="first highlight-bash notranslate"><div class="highlight"><pre><span></span>qsub run.sh
+</div></blockquote>
+</div>
+<div class="section" id="lsf">
+<h2>4.2 LSF调度<a class="headerlink" href="#lsf" title="永久链接至标题">¶</a></h2>
+<p>南京大学高性能计算中心安装了该调度系统。</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bsub &lt; lsf.sh
+bjobs
+bkill &lt;id&gt;
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>优点：同时计算多个，关闭 <code class="docutils literal notranslate"><span class="pre">xshell</span></code> ，不影响计算</p></li>
+<li><p>缺点：不能实时查看计算情况</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>提交计算</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bsub &lt; lsf.sh
+</pre></div>
+</div>
+<p>显示 <code class="docutils literal notranslate"><span class="pre">Job</span> <span class="pre">&lt;230259&gt;</span> <span class="pre">is</span> <span class="pre">submitted</span> <span class="pre">to</span> <span class="pre">queue</span> <span class="pre">&lt;mpi&gt;.</span></code> 说明提交成功。</p>
+<p><code class="docutils literal notranslate"><span class="pre">lsf.sh</span></code> 中内容如下:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#</span>
+<span class="c1">#BSUB -q mpi</span>
+<span class="c1">#BSUB -n 24</span>
+<span class="c1">#BSUB -R &quot;span[ptile=24]&quot;</span>
+/share/home/hwyin/vbox/vboxdaily push.py
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>查看计算状态</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bjobs
+</pre></div>
+</div>
+<p>显示</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>JOBID   USER    STAT  QUEUE      FROM_HOST   EXEC_HOST   JOB_NAME   SUBMIT_TIME
+<span class="m">230259</span>  hwyin   RUN   mpi        c01n02      <span class="m">24</span>*c38n11   *push.py Apr  <span class="m">1</span> <span class="m">12</span>:44
+</pre></div>
+</div>
+<p>从上面的输出可知，该任务的 <code class="docutils literal notranslate"><span class="pre">id</span></code> 为 <code class="docutils literal notranslate"><span class="pre">230259</span></code> 。<code class="docutils literal notranslate"><span class="pre">STAT</span></code> 状态为 <code class="docutils literal notranslate"><span class="pre">RUN</span></code> 说明正在计算。任务分配给了节点 <code class="docutils literal notranslate"><span class="pre">c38n11</span></code>，调用了 <code class="docutils literal notranslate"><span class="pre">24</span></code> 个核计算。更为详细的说明，可以查询 <code class="docutils literal notranslate"><span class="pre">LSF</span></code> 调度系统教程。</p>
+<ol class="arabic simple" start="3">
+<li><p>强制结束计算</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bkill &lt;id&gt;
+</pre></div>
+</div>
+<p>我们要杀死上面的任务， <code class="docutils literal notranslate"><span class="pre">bkill</span>&#160; <span class="pre">230259</span></code> 即可以。输出</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Job &lt;<span class="m">230259</span>&gt; is being terminated
+</pre></div>
+</div>
+<p>说明任务已经被杀死。</p>
+</div></blockquote>
+</div>
+<div class="section" id="sge">
+<h2>4.3 SGE调度<a class="headerlink" href="#sge" title="永久链接至标题">¶</a></h2>
+<p>南京大学尹宏伟课题组集群安装了该调度系统</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>qsub sge.sh
 qstat
 qdel &lt;id&gt;
 </pre></div>
 </div>
 <ul class="simple">
-<li>优点：同时计算多个，关闭 <code class="docutils literal notranslate"><span class="pre">xshell</span></code> ，不影响计算</li>
-<li>缺点：不能实时查看计算情况</li>
+<li><p>优点：同时计算多个，关闭 <code class="docutils literal notranslate"><span class="pre">xshell</span></code> ，不影响计算</p></li>
+<li><p>缺点：不能实时查看计算情况</p></li>
 </ul>
 <ol class="arabic simple">
-<li>提交计算</li>
+<li><p>提交计算</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>qsub run.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>qsub sge.sh
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">run.sh</span></code> 中内容如下:</p>
+<p>显示 <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">job</span> <span class="pre">3136</span> <span class="pre">(&quot;example&quot;)</span> <span class="pre">has</span> <span class="pre">been</span> <span class="pre">submitted</span></code> 说明提交成功。</p>
+<p><code class="docutils literal notranslate"><span class="pre">sge.sh</span></code> 中内容如下:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 <span class="c1">#2017-04-05</span>
 <span class="c1">#LI ChangSheng @ NanJing Uninversity</span>
@@ -239,25 +303,35 @@ qdel &lt;id&gt;
 <span class="c1">#$ -cwd</span>
 <span class="c1">#$ -pe orte 16 #调用16个核计算</span>
 <span class="nb">export</span> <span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="nv">$NSLOTS</span>
-<span class="nb">time</span> vboxdaily cmd.py <span class="c1">#提交计算</span>
+<span class="nb">time</span> vboxdaily push.py <span class="c1">#提交计算</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li>查看计算状态</li>
+<li><p>查看计算状态</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>qstat
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
-<li>强制结束计算</li>
-</ol>
-<div class="last highlight-bash notranslate"><div class="highlight"><pre><span></span>qdel &lt;id&gt;
+<p>显示</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>job-ID  prior   name       user         state submit/start at      queue                          slots ja-task-ID
+-----------------------------------------------------------------------------------------------------------------
+<span class="m">3136</span>    <span class="m">0</span>.55500 example    zhangsan     r     <span class="m">01</span>/20/2019 <span class="m">14</span>:43:53  all.q@sand-0-0.local              <span class="m">16</span>
 </pre></div>
 </div>
-</dd>
-</dl>
-</li>
-</ul>
+<p>从上面的输出可知，该任务的 <code class="docutils literal notranslate"><span class="pre">id</span></code> 为 <code class="docutils literal notranslate"><span class="pre">3136</span></code> 。<code class="docutils literal notranslate"><span class="pre">state</span></code> 状态为 <code class="docutils literal notranslate"><span class="pre">r</span></code> 说明正在计算，如果为 <code class="docutils literal notranslate"><span class="pre">w</span></code> 为排队等待状态。任务分配给了节点 <code class="docutils literal notranslate"><span class="pre">sand-0-0</span></code>，调用了 <code class="docutils literal notranslate"><span class="pre">16</span></code> 个核计算。更为详细的说明，可以查询 <code class="docutils literal notranslate"><span class="pre">SGE</span></code> 调度系统教程。</p>
+<ol class="arabic simple" start="3">
+<li><p>强制结束计算</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>qdel &lt;id&gt;
+</pre></div>
+</div>
+<p>我们要杀死上面的任务， <code class="docutils literal notranslate"><span class="pre">qdel</span>&#160; <span class="pre">3136</span></code> 即可以。输出</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zhangsan has registered the job <span class="m">3136</span> <span class="k">for</span> deletion
+</pre></div>
+</div>
+<p>说明任务已经被杀死。</p>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -282,6 +356,18 @@ qdel &lt;id&gt;
 <!--gitalk.render('gitalk-container');-->
 <!--</script>-->
 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?65dbb2d111562c71ec1b9c0e0cd2969b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
            </div>
            
           </div>
@@ -289,10 +375,10 @@ qdel &lt;id&gt;
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="color.html" class="btn btn-neutral float-right" title="5 颜色表" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="struct/index.html" class="btn btn-neutral float-right" title="5 构造模拟" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="push/index.html" class="btn btn-neutral" title="3 一个实例学会VBOX" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="push/index.html" class="btn btn-neutral float-left" title="3 一个示例学会VBOX" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -302,7 +388,9 @@ qdel &lt;id&gt;
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2019, VBOX官网
-      最后更新于 2019年01月17日.
+      <span class="lastupdated">
+        最后更新于 2019年04月01日.
+      </span>
 
     </p>
   </div>
@@ -319,27 +407,16 @@ qdel &lt;id&gt;
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
