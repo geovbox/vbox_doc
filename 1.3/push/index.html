@@ -23,12 +23,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                1.3
+                1.4
               </div>
             
           
@@ -220,7 +220,7 @@
 <span class="c1">#程序初始化</span>
 START
 <span class="c1">#颗粒设为球，计算颗粒体积用4/3*pi*r^3计算</span>
-<span class="nb">set</span> disk off
+SET disk off
 <span class="c1">#设置研究范围 </span>
 BOX left <span class="m">0</span>.0 right <span class="m">41000</span>.0 bottom <span class="m">0</span>.0 height <span class="m">11000</span>.0 <span class="nv">kn</span><span class="o">=</span>0e10 <span class="nv">ks</span><span class="o">=</span>0e10 fric <span class="m">0</span>.00 
 <span class="c1">#设置挡板墙，这里模型采用hertz接触模型，挡板墙的kn ks无效，计算时取颗粒的参数</span>
@@ -228,25 +228,27 @@ WALL ID <span class="m">0</span>, NODES <span class="o">(</span>      <span clas
 WALL ID <span class="m">1</span>, NODES <span class="o">(</span>     <span class="m">10</span>.0 ,  <span class="m">10000</span>.0 <span class="o">)</span> <span class="o">(</span>     <span class="m">10</span>.0 ,     <span class="m">10</span>.0 <span class="o">)</span>, <span class="nv">kn</span><span class="o">=</span>0e10 <span class="nv">ks</span><span class="o">=</span>0e10 fric <span class="m">0</span>.0 COLOR blue
 WALL ID <span class="m">2</span>, NODES <span class="o">(</span>  <span class="m">40000</span>.0 ,     <span class="m">10</span>.0 <span class="o">)</span> <span class="o">(</span>  <span class="m">40000</span>.0 ,  <span class="m">10000</span>.0 <span class="o">)</span>, <span class="nv">kn</span><span class="o">=</span>0e10 <span class="nv">ks</span><span class="o">=</span>0e10 fric <span class="m">0</span>.0 COLOR red
 <span class="c1">#在矩形范围内生成颗粒</span>
-GEN NUM <span class="m">100000</span>.0 rad discrete <span class="m">60</span>.0 <span class="m">80</span>.0,  x <span class="o">(</span> <span class="m">10</span>.0, <span class="m">40000</span>.0<span class="o">)</span>, y <span class="o">(</span> <span class="m">10</span>.0, <span class="m">10000</span>.0<span class="o">)</span>, COLOR black GROUP ball_rand
-<span class="c1">#设置颗粒的微观参数</span>
-PROP DENSITY <span class="m">2</span>.5e3, fric <span class="m">0</span>.0, shear <span class="m">2</span>.9e9, poiss <span class="m">0</span>.2, damp <span class="m">0</span>.4, hertz
+GEN NUM <span class="m">100000</span> rad discrete <span class="m">60</span>.0 <span class="m">80</span>.0,  x <span class="o">(</span> <span class="m">10</span>.0, <span class="m">40000</span>.0<span class="o">)</span>, y <span class="o">(</span> <span class="m">10</span>.0, <span class="m">10000</span>.0<span class="o">)</span>, COLOR black GROUP ball_rand
+<span class="c1">#设置颗粒的微观参数　density 密度，firc 摩擦系数，shear 剪切模量，poiss　泊松比，damp 局部阻尼常数，heart　Hertz-Mindlin接触模型</span>
+PROP density <span class="m">2</span>.5e3, fric <span class="m">0</span>.0, shear <span class="m">2</span>.9e9, poiss <span class="m">0</span>.2, damp <span class="m">0</span>.4, hertz
 <span class="c1">#设置时间步及重力加速度</span>
 SET  DT 5e-2,  GRAVITY  <span class="m">0</span>.0,  -9.8 
+<span class="c1">#设置每1000步保存一次vtk格式的计算结果</span>
+SET  vtk <span class="m">1000</span>
 <span class="c1">#设置每1000步保存一次ps格式的计算结果</span>
 SET  ps <span class="m">1000</span>
 <span class="c1">#设置每1000步保存一次dat格式的计算结果</span>
 SET  print <span class="m">1000</span>
 <span class="c1">#沉积，计算5000步</span>
 CYC <span class="m">5000</span>
-<span class="c1">#删除6000米以上的颗粒</span>
+<span class="c1">#删除4000米以上的颗粒</span>
 DEL RANGE y <span class="m">4000</span>.0 <span class="m">999000</span>.0
 <span class="c1">#平衡，计算1000步</span>
 CYC <span class="m">1000</span>
 <span class="c1">#输出包含颗粒的[x y r]信息的初始模型 init_xyr.dat</span>
 <span class="c1">#EXP init_xyr.dat</span>
 
-<span class="c1">#设置bond粘结，使颗粒具有粘聚力</span>
+<span class="c1">#设置bond粘结，使颗粒具有粘聚力，ebmod 杨氏模量，　gbmod 剪切模量，tstrength 抗拉强度，sstrength　聚合强度，　firc 摩擦系数</span>
 PROP ebmod 2e8 gbmod 2e8  tstrength 2e7 sstrength 4e7 fric <span class="m">0</span>.3 
 <span class="c1">#给地层赋上颜色</span>
 PROP COLOR lg          range y    <span class="m">0</span>.0   <span class="m">500</span>.0
@@ -266,7 +268,7 @@ WALL id <span class="m">2</span> fric <span class="m">0</span>.3
 <span class="c1">#设置墙的挤压速度 x方向速度为2.0</span>
 WALL id <span class="m">1</span> xv <span class="m">2</span>.0
 <span class="c1">#设置墙的挤压量x方向推进10000.0，每挤压2000.0保存一次计算结果</span>
-IMPLE wall id <span class="m">1</span> xmove <span class="m">10000</span>.0 save <span class="m">2000</span>.0 print <span class="m">1000</span>.0 ps <span class="m">1000</span>.0
+IMPLE wall id <span class="m">1</span> xmove <span class="m">10000</span>.0 save <span class="m">2000</span>.0 print <span class="m">1000</span>.0 ps <span class="m">1000</span>.0 vtk <span class="m">1000</span>.0
 <span class="c1">#计算停止</span>
 STOP
 </pre></div>
@@ -371,7 +373,7 @@ var _hmt = _hmt || [];
     <p>
         &copy; Copyright 2014 - 2020, VBOX官网
       <span class="lastupdated">
-        最后更新于 2020年01月12日.
+        最后更新于 2020年02月29日.
       </span>
 
     </p>
