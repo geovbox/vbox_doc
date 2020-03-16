@@ -229,9 +229,12 @@
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">说明</dt>
-<dd class="field-odd"><p>读取VBOX生成的 <code class="docutils literal notranslate"><span class="pre">all_*.dat</span></code> 文件绘制如 <code class="docutils literal notranslate"><span class="pre">jpg</span></code> <code class="docutils literal notranslate"><span class="pre">pdf</span></code> 等格式的图片</p>
+<dd class="field-odd"><p>读取VBOX生成的 <code class="docutils literal notranslate"><span class="pre">all_*.dat</span></code> 文件绘制如 <code class="docutils literal notranslate"><span class="pre">jpg</span></code> 格式的图片</p>
 </dd>
 </dl>
+<ul class="simple">
+<li><p>实例　<code class="docutils literal notranslate"><span class="pre">vbox2jpg</span> <span class="pre">--dir=./data</span> <span class="pre">--ymin=0.0</span> <span class="pre">--xmin=0.0</span> <span class="pre">--xmove=-1000.0</span> <span class="pre">--ymove=-1000.0</span> <span class="pre">--linewidth=0.8</span> <span class="pre">--fontsize=8</span> <span class="pre">--xmax=50000.0</span> <span class="pre">--ymax=10000.0</span> <span class="pre">--dpi=600</span> <span class="pre">--pagesize=14</span> <span class="pre">--topshow=false</span> <span class="pre">--rightshow=false</span></code></p></li>
+</ul>
 <div class="section" id="id1">
 <h2>必选选项<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <dl class="simple">
@@ -258,13 +261,23 @@
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--minor_locator=&lt;float&gt;</span></code></dt><dd><p>次坐标刻度间隔，默认1000.0</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">--fontsize=&lt;int&gt;</span></code></dt><dd><p>坐标刻度字体大小，默认12</p>
+<dt><code class="docutils literal notranslate"><span class="pre">--fontsize=&lt;int&gt;</span></code></dt><dd><p>坐标刻度字体大小，默认9</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--max_workers=&lt;float&gt;</span></code></dt><dd><p>并行进程数，默认24</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">--dpi=&lt;int&gt;</span></code></dt><dd><p>图片分辨率，默认300</p>
+<dt><code class="docutils literal notranslate"><span class="pre">--dpi=&lt;int&gt;</span></code></dt><dd><p>图片分辨率，默认600</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">--linewidth=&lt;float&gt;</span></code></dt><dd><p>线条粗细，默认1.0</p>
+<dt><code class="docutils literal notranslate"><span class="pre">--linewidth=&lt;float&gt;</span></code></dt><dd><p>线条粗细，默认0.8</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--pagesize=&lt;int&gt;</span></code></dt><dd><p>图片大小，单位cm，默认14</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--leftshow=&lt;bool&gt;</span></code></dt><dd><p>显示坐标轴左线框，取值true/false，默认true</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--rightshow=&lt;bool&gt;</span></code></dt><dd><p>显示坐标轴左线框，取值true/false，默认true</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--bottomshow=&lt;bool&gt;</span></code></dt><dd><p>显示坐标轴左线框，取值true/false，默认true</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--topshow=&lt;bool&gt;</span></code></dt><dd><p>显示坐标轴左线框，取值true/false，默认true</p>
 </dd>
 </dl>
 <ul class="simple">
@@ -337,7 +350,7 @@ var _hmt = _hmt || [];
     <p>
         &copy; Copyright 2014 - 2020, VBOX官网
       <span class="lastupdated">
-        最后更新于 2020年02月29日.
+        最后更新于 2020年03月16日.
       </span>
 
     </p>
