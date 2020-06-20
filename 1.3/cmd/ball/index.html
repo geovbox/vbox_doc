@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
@@ -33,10 +38,6 @@
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="6.2 bond" href="../bond/" />
@@ -54,7 +55,7 @@
           
 
           
-            <a href="../../" class="icon icon-home"> VBOX手册
+            <a href="../../" class="icon icon-home" alt="Documentation Home"> VBOX手册
           
 
           
@@ -81,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -145,6 +147,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -183,7 +186,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">Docs</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../"><span class="section-number">6 </span>命令参考</a> &raquo;</li>
         
@@ -223,12 +226,16 @@
 <dt class="field-odd">说明</dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">bal[l]</span></code> 新建一个颗粒</p>
 </dd>
+<dt class="field-even">使用方法</dt>
+<dd class="field-even"><p></p></dd>
 </dl>
-<p>使用方法:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>BALL ID &lt;int&gt;, <span class="nv">X</span><span class="o">=</span>&lt;float&gt; <span class="nv">Y</span><span class="o">=</span>&lt;float&gt; <span class="nv">RAD</span><span class="o">=</span>&lt;float&gt; <span class="o">[</span><span class="nv">COLOR</span><span class="o">=</span>&lt;str&gt;<span class="o">]</span> <span class="o">[</span><span class="nv">GROUP</span><span class="o">=</span>&lt;str&gt;<span class="o">]</span>
 </pre></div>
 </div>
-<p>实例:</p>
+<dl class="field-list simple">
+<dt class="field-odd">实例</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 生成颗粒，id，圆心(2.0,0.5)，半径0.5，蓝色颗粒</span>
 BALL  <span class="nv">ID</span><span class="o">=</span><span class="m">0</span>  <span class="nv">X</span><span class="o">=</span><span class="m">2</span>.0  <span class="nv">Y</span><span class="o">=</span><span class="m">0</span>.5  <span class="nv">RAD</span><span class="o">=</span><span class="m">0</span>.5  <span class="nv">COLOR</span><span class="o">=</span>blue
 </pre></div>
@@ -288,14 +295,22 @@ var _hmt = _hmt || [];
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, VBOX官网
+        
+        &copy; 版权所有 2014 - 2020, VBOX官网
       <span class="lastupdated">
-        最后更新于 2020年03月16日.
+        最后更新于 2020年06月20日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -306,7 +321,6 @@ var _hmt = _hmt || [];
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

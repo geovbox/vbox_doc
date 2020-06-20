@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
@@ -33,10 +38,6 @@
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="7 颜色表" href="../../color/" />
@@ -54,7 +55,7 @@
           
 
           
-            <a href="../../" class="icon icon-home"> VBOX手册
+            <a href="../../" class="icon icon-home" alt="Documentation Home"> VBOX手册
           
 
           
@@ -81,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -149,6 +151,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -187,7 +190,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">Docs</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../"><span class="section-number">6 </span>命令参考</a> &raquo;</li>
         
@@ -231,10 +234,12 @@
 <dt class="field-odd">说明</dt>
 <dd class="field-odd"><p>读取VBOX生成的 <code class="docutils literal notranslate"><span class="pre">all_*.dat</span></code> 文件绘制如 <code class="docutils literal notranslate"><span class="pre">jpg</span></code> 格式的图片</p>
 </dd>
+<dt class="field-even">实例</dt>
+<dd class="field-even"><p></p></dd>
 </dl>
-<ul class="simple">
-<li><p>实例　<code class="docutils literal notranslate"><span class="pre">vbox2jpg</span> <span class="pre">--dir=./data</span> <span class="pre">--ymin=0.0</span> <span class="pre">--xmin=0.0</span> <span class="pre">--xmove=-1000.0</span> <span class="pre">--ymove=-1000.0</span> <span class="pre">--linewidth=0.8</span> <span class="pre">--fontsize=8</span> <span class="pre">--xmax=50000.0</span> <span class="pre">--ymax=10000.0</span> <span class="pre">--dpi=600</span> <span class="pre">--pagesize=14</span> <span class="pre">--topshow=false</span> <span class="pre">--rightshow=false</span></code></p></li>
-</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vbox2jpg --dir<span class="o">=</span>./data --ymin<span class="o">=</span><span class="m">0</span>.0 --xmin<span class="o">=</span><span class="m">0</span>.0 --xmove<span class="o">=</span>-1000.0 --ymove<span class="o">=</span>-1000.0 --linewidth<span class="o">=</span><span class="m">0</span>.8 --fontsize<span class="o">=</span><span class="m">8</span> --xmax<span class="o">=</span><span class="m">50000</span>.0 --ymax<span class="o">=</span><span class="m">10000</span>.0 --dpi<span class="o">=</span><span class="m">600</span> --pagesize<span class="o">=</span><span class="m">14</span> --topshow<span class="o">=</span><span class="nb">false</span> --rightshow<span class="o">=</span><span class="nb">false</span>
+</pre></div>
+</div>
 <div class="section" id="id1">
 <h2>必选选项<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <dl class="simple">
@@ -278,6 +283,8 @@
 <dt><code class="docutils literal notranslate"><span class="pre">--bottomshow=&lt;bool&gt;</span></code></dt><dd><p>显示坐标轴左线框，取值true/false，默认true</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--topshow=&lt;bool&gt;</span></code></dt><dd><p>显示坐标轴左线框，取值true/false，默认true</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--wallshow=&lt;bool&gt;</span></code></dt><dd><p>显示wall墙，取值true/false，默认true</p>
 </dd>
 </dl>
 <ul class="simple">
@@ -348,14 +355,22 @@ var _hmt = _hmt || [];
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, VBOX官网
+        
+        &copy; 版权所有 2014 - 2020, VBOX官网
       <span class="lastupdated">
-        最后更新于 2020年03月16日.
+        最后更新于 2020年06月20日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -366,7 +381,6 @@ var _hmt = _hmt || [];
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

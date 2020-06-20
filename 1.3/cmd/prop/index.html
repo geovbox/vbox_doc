@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
@@ -33,10 +38,6 @@
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="6.14 psconvert" href="../psconvert/" />
@@ -54,7 +55,7 @@
           
 
           
-            <a href="../../" class="icon icon-home"> VBOX手册
+            <a href="../../" class="icon icon-home" alt="Documentation Home"> VBOX手册
           
 
           
@@ -81,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -145,6 +147,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -183,7 +186,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">Docs</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../"><span class="section-number">6 </span>命令参考</a> &raquo;</li>
         
@@ -223,8 +226,9 @@
 <dt class="field-odd">说明</dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">pro[p]</span></code> 设置材料参数</p>
 </dd>
+<dt class="field-even">使用方法</dt>
+<dd class="field-even"><p></p></dd>
 </dl>
-<p>使用方法:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PROP DENSITY &lt;float&gt;, FRIC &lt;float&gt;, SHEAR &lt;float&gt;, POISS &lt;float&gt;, DAMP &lt;float&gt;, HERTZ <span class="o">[</span>RANGE ...<span class="o">]</span>
 PROP ebmod &lt;float&gt;, gbmod &lt;float&gt;, tstrength &lt;float&gt;, sstrength &lt;float&gt;, <span class="o">[</span>tolerate <span class="m">10</span>.0<span class="o">]</span> <span class="o">[</span>fric &lt;float&gt;<span class="o">]</span> <span class="o">[</span>RANGE ...<span class="o">]</span>
 PROP DENSITY &lt;float&gt;, FRIC &lt;float&gt;, KN &lt;float&gt;, KS &lt;float&gt; <span class="o">[</span>tolerate rext <span class="m">0</span>.8<span class="o">]</span> <span class="o">[</span>RANGE ...<span class="o">]</span>
@@ -232,7 +236,10 @@ PROP n_bond &lt;float&gt; s_bond &lt;float&gt; <span class="o">[</span>RANGE ...
 </pre></div>
 </div>
 <p>其中， <code class="docutils literal notranslate"><span class="pre">tolerate</span></code> 默认值为1e-6，<code class="docutils literal notranslate"><span class="pre">rext</span></code> 默认值为1.0。 <code class="docutils literal notranslate"><span class="pre">rext</span></code> 可与 <code class="docutils literal notranslate"><span class="pre">gline</span></code> 的 cratio，联合使用，设置 <code class="docutils literal notranslate"><span class="pre">rext=cratio</span></code>，可以避免0-1-2-3-4…线性叠合的颗粒，出现0-2跨颗粒1产生粘结。</p>
-<p>实例:</p>
+<dl class="field-list simple">
+<dt class="field-odd">实例</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Model 1. ref. [Morgan 2015 JGR] 和 [李长圣博士论文,2019]</span>
 <span class="c1"># 设置材料参数 密度DEM，摩擦系数FRIC，剪切模量shear，泊松比poiss，阻尼DAMP</span>
 PROP DENSITY <span class="m">2</span>.5e3, fric <span class="m">0</span>.3, shear <span class="m">2</span>.9e9, poiss <span class="m">0</span>.2, damp <span class="m">0</span>.4, HERTZ
@@ -308,14 +315,22 @@ var _hmt = _hmt || [];
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, VBOX官网
+        
+        &copy; 版权所有 2014 - 2020, VBOX官网
       <span class="lastupdated">
-        最后更新于 2020年03月16日.
+        最后更新于 2020年06月20日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -326,7 +341,6 @@ var _hmt = _hmt || [];
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
@@ -33,10 +38,6 @@
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="6.4 cyc" href="../cyc/" />
@@ -54,7 +55,7 @@
           
 
           
-            <a href="../../" class="icon icon-home"> VBOX手册
+            <a href="../../" class="icon icon-home" alt="Documentation Home"> VBOX手册
           
 
           
@@ -81,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -101,6 +103,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../bond/">6.2 bond</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">6.3 convert</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">可选选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">实例</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../cyc/">6.4 cyc</a></li>
@@ -148,6 +151,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -186,7 +190,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">Docs</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../"><span class="section-number">6 </span>命令参考</a> &raquo;</li>
         
@@ -233,13 +237,13 @@
 <dt><code class="docutils literal notranslate"><span class="pre">-delay=&lt;int&gt;</span></code></dt><dd><p>播放速度，一般取100</p>
 </dd>
 </dl>
-<ul class="simple">
-<li><dl class="simple">
-<dt>实例 <code class="docutils literal notranslate"><span class="pre">convert</span> <span class="pre">-delay</span> <span class="pre">100</span> <span class="pre">./data/*[0-9].jpg</span> <span class="pre">-loop</span> <span class="pre">0</span> <span class="pre">./data/process.gif</span>&#160; <span class="pre">#　制作</span> <span class="pre">gif</span></code></dt><dd><p>读取目录 <code class="docutils literal notranslate"><span class="pre">./data</span></code> 中的图片 <code class="docutils literal notranslate"><span class="pre">*[0-9].jpg</span></code> ，并生成 <code class="docutils literal notranslate"><span class="pre">process.gif</span></code> ，保存到 <code class="docutils literal notranslate"><span class="pre">./data</span></code> 中。</p>
-</dd>
-</dl>
-</li>
-</ul>
+</div>
+<div class="section" id="id2">
+<h2>实例<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>convert -delay <span class="m">100</span> ./data/*<span class="o">[</span><span class="m">0</span>-9<span class="o">]</span>.jpg -loop <span class="m">0</span> ./data/process.gif  <span class="c1">#　制作 gif</span>
+</pre></div>
+</div>
+<p>读取目录 <code class="docutils literal notranslate"><span class="pre">./data</span></code> 中的图片 <code class="docutils literal notranslate"><span class="pre">*[0-9].jpg</span></code> ，并生成 <code class="docutils literal notranslate"><span class="pre">process.gif</span></code> ，保存到 <code class="docutils literal notranslate"><span class="pre">./data</span></code> 中。</p>
 </div>
 </div>
 
@@ -296,14 +300,22 @@ var _hmt = _hmt || [];
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, VBOX官网
+        
+        &copy; 版权所有 2014 - 2020, VBOX官网
       <span class="lastupdated">
-        最后更新于 2020年03月16日.
+        最后更新于 2020年06月20日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -314,7 +326,6 @@ var _hmt = _hmt || [];
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

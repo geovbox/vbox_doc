@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
@@ -33,10 +38,6 @@
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="6.11 imple" href="../imple/" />
@@ -54,7 +55,7 @@
           
 
           
-            <a href="../../" class="icon icon-home"> VBOX手册
+            <a href="../../" class="icon icon-home" alt="Documentation Home"> VBOX手册
           
 
           
@@ -81,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -145,6 +147,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -183,7 +186,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">Docs</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../"><span class="section-number">6 </span>命令参考</a> &raquo;</li>
         
@@ -223,13 +226,17 @@
 <dt class="field-odd">说明</dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">gli[ne]</span></code> 在两个点之间建立一组线形排列的颗粒</p>
 </dd>
+<dt class="field-even">使用方法</dt>
+<dd class="field-even"><p></p></dd>
 </dl>
-<p>使用方法:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>GLINE <span class="nv">RAD</span><span class="o">=</span>&lt;float&gt; P1 <span class="o">(</span> &lt;float&gt; &lt;float&gt; <span class="o">)</span> P2 <span class="o">(</span> &lt;float&gt; &lt;float&gt; <span class="o">)</span>, <span class="nv">KN</span><span class="o">=</span>&lt;float&gt; <span class="nv">KS</span><span class="o">=</span>&lt;float&gt; <span class="nv">FRIC</span><span class="o">=</span>&lt;float&gt;, <span class="o">[</span><span class="nv">COLOR</span><span class="o">=</span>&lt;str&gt;<span class="o">]</span> , <span class="o">[</span><span class="nv">GROUP</span><span class="o">=</span>&lt;str&gt;<span class="o">]</span>, <span class="o">[</span><span class="nv">CRATIO</span><span class="o">=</span>&lt;float&gt;<span class="o">]</span>
 </pre></div>
 </div>
 <p>其中，CRATIO为初始叠和率，cratio = <a href="#id1"><span class="problematic" id="id2">|OA|</span></a>/(rO+rA)，取值范围(0.0~1.0]。当颗粒刚好接触时，cratio=(rO+rA)/(rO+rA)=1.0；当颗粒完全重合时，cratio=0.0/(rO+rA)=0.0</p>
-<p>实例:</p>
+<dl class="field-list simple">
+<dt class="field-odd">实例</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 在点 ``( 2.0  10.0 )`` 和点 ``( 40.0  10.0 )`` 间生成半径为0.5的颗粒，法向刚度系数kn=4.14e3，切向刚度系数ks=4.14e3，摩擦系数fric=0.55，颜色color=red，组名GROUP=bom</span>
 GLINE <span class="nv">RAD</span><span class="o">=</span><span class="m">0</span>.5 P1 <span class="o">(</span> <span class="m">2</span>.0  <span class="m">10</span>.0 <span class="o">)</span> P2 <span class="o">(</span> <span class="m">40</span>.0  <span class="m">10</span>.0 <span class="o">)</span>, <span class="nv">kn</span><span class="o">=</span><span class="m">4</span>.14e3 <span class="nv">ks</span><span class="o">=</span><span class="m">4</span>.14e3 <span class="nv">fric</span><span class="o">=</span><span class="m">0</span>.55 <span class="nv">color</span><span class="o">=</span>red <span class="nv">GROUP</span><span class="o">=</span>bom
 <span class="c1"># 初始叠合率设置为0.8，颗粒圆心间的距离为|OA| = (rO+rA)*cratio=(0.5+0.5)*0.8=0.8</span>
@@ -291,14 +298,22 @@ var _hmt = _hmt || [];
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, VBOX官网
+        
+        &copy; 版权所有 2014 - 2020, VBOX官网
       <span class="lastupdated">
-        最后更新于 2020年03月16日.
+        最后更新于 2020年06月20日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -309,7 +324,6 @@ var _hmt = _hmt || [];
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

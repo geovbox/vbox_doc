@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
@@ -33,10 +38,6 @@
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="6.10 gline" href="../gline/" />
@@ -54,7 +55,7 @@
           
 
           
-            <a href="../../" class="icon icon-home"> VBOX手册
+            <a href="../../" class="icon icon-home" alt="Documentation Home"> VBOX手册
           
 
           
@@ -81,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -145,6 +147,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -183,7 +186,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">Docs</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../"><span class="section-number">6 </span>命令参考</a> &raquo;</li>
         
@@ -223,12 +226,16 @@
 <dt class="field-odd">说明</dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">gen</span></code> 在一个矩形空间中生成一定数量的颗粒</p>
 </dd>
+<dt class="field-even">使用方法</dt>
+<dd class="field-even"><p></p></dd>
 </dl>
-<p>使用方法:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>GEN NUM &lt;int&gt;, RAD DISCRETE &lt;float&gt; &lt;float&gt;, X <span class="o">(</span>&lt;float&gt; &lt;float&gt;<span class="o">)</span>, Y <span class="o">(</span>&lt;float&gt; &lt;float&gt;<span class="o">)</span> <span class="o">[</span><span class="nv">COLOR</span><span class="o">=</span>&lt;str&gt;<span class="o">]</span> <span class="o">[</span><span class="nv">GROUP</span><span class="o">=</span>&lt;str&gt;<span class="o">]</span>
 </pre></div>
 </div>
-<p>实例:</p>
+<dl class="field-list simple">
+<dt class="field-odd">实例</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 生成一定数量的颗粒，数量20000，颗粒半径随机生成为 60.0 或者 80.0 ， 矩形左右边界为(1000.0, 61000.0)，上下边界为 (1000.0, 13000.0)，黑色</span>
 GEN NUM <span class="m">20000</span> rad discrete <span class="m">60</span>.0 <span class="m">80</span>.0,  x <span class="o">(</span><span class="m">1000</span>.0, <span class="m">61000</span>.0<span class="o">)</span>, y <span class="o">(</span><span class="m">1000</span>.0, <span class="m">13000</span>.0<span class="o">)</span>, COLOR black GROUP ball_rand
 </pre></div>
@@ -288,14 +295,22 @@ var _hmt = _hmt || [];
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, VBOX官网
+        
+        &copy; 版权所有 2014 - 2020, VBOX官网
       <span class="lastupdated">
-        最后更新于 2020年03月16日.
+        最后更新于 2020年06月20日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -306,7 +321,6 @@ var _hmt = _hmt || [];
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
