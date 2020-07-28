@@ -360,6 +360,7 @@ convert -delay <span class="m">100</span> ./data/*<span class="o">[</span><span 
 <p>其中， <code class="docutils literal notranslate"><span class="pre">pbs.sh</span></code>　中内容：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#PBS -N sheng ##可以给任务一个名字,方便辨识</span>
 <span class="c1">#PBS -l nodes=1:ppn=12 ##使用1节点，每个节点12核</span>
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span> <span class="c1">##到当前工作目录下（此为PBS提供的环境变量）</span>
 vboxdaily push.py
 vbox2jpg --dir<span class="o">=</span>./data
 convert -delay <span class="m">100</span> ./data/*<span class="o">[</span><span class="m">0</span>-9<span class="o">]</span>.jpg -loop <span class="m">0</span> ./data/process.gif
@@ -461,7 +462,7 @@ var _hmt = _hmt || [];
         
         &copy; 版权所有 2014 - 2020, VBOX官网
       <span class="lastupdated">
-        最后更新于 2020年07月16日.
+        最后更新于 2020年07月28日.
       </span>
 
     </p>
