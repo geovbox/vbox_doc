@@ -112,6 +112,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../hpc/">9 开通账户</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../linux/">10 Linux命令行</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../thanks/">11 致谢</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vbox1.4_license/">12 使用协议</a></li>
 </ul>
 
             
@@ -236,6 +237,7 @@ vbox2jpg --dir<span class="o">=</span>./data/ --xmax<span class="o">=</span><spa
 <p><code class="docutils literal notranslate"><span class="pre">palaeohigh.py</span></code> 中内容如下：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">######################################</span>
 <span class="c1"># title: 古隆起设置方法</span>
+<span class="c1"># date: 2020-08-11 添加INI，初始化古隆起颗粒速度为零</span>
 <span class="c1"># date: 2019-06-29</span>
 <span class="c1"># authors: 李长圣</span>
 <span class="c1"># E-mail: sheng0619@163.com</span>
@@ -279,6 +281,9 @@ PROP GROUP palaeohigh RANGE ellipse <span class="o">(</span> <span class="m">200
 PROP GROUP palaeohigh RANGE P4 <span class="o">(</span> <span class="m">10000</span>.0,  <span class="m">0</span>.0<span class="o">)</span> <span class="o">(</span> <span class="m">12000</span>.0,  <span class="m">0</span>.0<span class="o">)</span> <span class="o">(</span> <span class="m">15000</span>.0  <span class="m">0</span>.0<span class="o">)</span> <span class="o">(</span> <span class="m">12500</span>.0  <span class="m">1500</span>.0<span class="o">)</span>
 <span class="c1">#打断struct1组内的颗粒粘结</span>
 BOND <span class="nb">break</span> RANGE GROUP palaeohigh
+<span class="c1">#初始化古隆起颗粒速度为零</span>
+INI xv <span class="m">0</span>.0 yv <span class="m">0</span>.0 spin <span class="m">0</span>.0 RANGE GROUP palaehigh
+<span class="c1">#限制古隆起颗粒运动</span>
 FIX x y spin RANGE GROUP palaeohigh
 <span class="c1">#将palaeohigh组的颗粒颜色设置为黑色 </span>
 PROP COLOR black  RANGE GROUP palaeohigh
@@ -368,7 +373,7 @@ var _hmt = _hmt || [];
         
         &copy; 版权所有 2014 - 2020, VBOX官网
       <span class="lastupdated">
-        最后更新于 2020年07月28日.
+        最后更新于 2020年11月28日.
       </span>
 
     </p>
