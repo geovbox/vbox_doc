@@ -31,7 +31,6 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
         <script src="../../_static/translations.js"></script>
         <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
@@ -228,8 +227,13 @@
 <dt class="field-odd">说明</dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">gen</span></code> 在一个矩形空间中生成一定数量的颗粒</p>
 </dd>
-<dt class="field-even">使用方法</dt>
-<dd class="field-even"><p></p></dd>
+</dl>
+<ul class="simple">
+<li><p>支持变量 <code class="docutils literal notranslate"><span class="pre">{left}</span> <span class="pre">{right}</span> <span class="pre">{bottom}</span> <span class="pre">{top}</span></code>, 大括号引用所需要的变量，如式子 <code class="docutils literal notranslate"><span class="pre">{top}-1000.0</span></code>, 式子内不能有空格。</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">使用方法</dt>
+<dd class="field-odd"><p></p></dd>
 </dl>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>GEN NUM &lt;int&gt;, RAD DISCRETE &lt;float&gt; &lt;float&gt;, X <span class="o">(</span>&lt;float&gt; &lt;float&gt;<span class="o">)</span>, Y <span class="o">(</span>&lt;float&gt; &lt;float&gt;<span class="o">)</span> <span class="o">[</span><span class="nv">COLOR</span><span class="o">=</span>&lt;str&gt;<span class="o">]</span> <span class="o">[</span><span class="nv">GROUP</span><span class="o">=</span>&lt;str&gt;<span class="o">]</span>
 </pre></div>
@@ -238,9 +242,25 @@
 <dt class="field-odd">实例</dt>
 <dd class="field-odd"><p></p></dd>
 </dl>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 生成一定数量的颗粒，数量20000，颗粒半径随机生成为 60.0 或者 80.0 ， 矩形左右边界为(1000.0, 61000.0)，上下边界为 (1000.0, 13000.0)，黑色</span>
-GEN NUM <span class="m">20000</span> rad discrete <span class="m">60</span>.0 <span class="m">80</span>.0,  x <span class="o">(</span><span class="m">1000</span>.0, <span class="m">61000</span>.0<span class="o">)</span>, y <span class="o">(</span><span class="m">1000</span>.0, <span class="m">13000</span>.0<span class="o">)</span>, COLOR black GROUP ball_rand
+<ol class="arabic simple">
+<li><p>生成一定数量的颗粒，数量20000，颗粒半径随机生成为 60.0 或者 80.0 ， 矩形左右边界为(1000.0, 61000.0)，上下边界为 (1000.0, 13000.0)，黑色</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>GEN NUM <span class="m">20000</span> rad discrete <span class="m">60</span>.0 <span class="m">80</span>.0,  x <span class="o">(</span><span class="m">1000</span>.0, <span class="m">61000</span>.0<span class="o">)</span>, y <span class="o">(</span><span class="m">1000</span>.0, <span class="m">13000</span>.0<span class="o">)</span>, COLOR black GROUP ball_rand
 </pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>沉积。在挤压顶部往下1000米范围内生成颗粒，沉积后约 500 m 颗粒。经验：颗粒充填满1km范围，沉积之后的地层厚度约为500m。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>GEN NUM <span class="m">100000</span>.0 rad discrete <span class="m">60</span>.0 <span class="m">80</span>.0,  x <span class="o">({</span>left<span class="o">}</span>, <span class="o">{</span>right<span class="o">})</span>, y <span class="o">(</span> <span class="o">{</span>top<span class="o">}</span>-1000.0, <span class="o">{</span>top<span class="o">})</span>, COLOR red GROUP sed1
+</pre></div>
+</div>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/gen1.jpg"><img alt="../../_images/gen1.jpg" src="../../_images/gen1.jpg" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">图 6.1 </span><span class="caption-text"><strong>沉积前</strong></span><a class="headerlink" href="#id1" title="永久链接至图片">¶</a></p>
+</div>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/gen2.jpg"><img alt="../../_images/gen2.jpg" src="../../_images/gen2.jpg" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">图 6.2 </span><span class="caption-text"><strong>沉积后</strong></span><a class="headerlink" href="#id2" title="永久链接至图片">¶</a></p>
 </div>
 </div>
 
@@ -300,7 +320,7 @@ var _hmt = _hmt || [];
         
         &copy; 版权所有 2014 - 2020, VBOX官网
       <span class="lastupdated">
-        最后更新于 2020年11月29日.
+        最后更新于 2020年12月30日.
       </span>
 
     </p>
